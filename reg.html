@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registracia</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="javascript/reg-script.js"></script>
+</head>
+<body id="reg-body">
+<header>
+    <div id="head">
+        <div id="back">
+            <img src='pictures/back.svg' alt='edit' class='icon img' width='40' height='40' onclick="window.location = 'index.html'">
+        </div>
+        <h1>Registrácia</h1>
+    </div>
+</header>
+<section>
+    <article>
+        <div id="registration">
+            <form onsubmit="return false;" id="registration-formular">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="name">Meno</label>
+                        <input type="text" class="form-control" id="name" required pattern='^(?!\s*$).+'  name="name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="surname">Priezvisko</label>
+                        <input type="text" class="form-control" id="surname" name="surname" required pattern='^(?!\s*$).+' >
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" required  >
+                        <div class="invalid-feedback">
+                            Email už existuje
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="password">Heslo</label>
+                        <input type="password" class="form-control" id="password" name="password" required  oninput="checkPassword()">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="password-control">Zopakuj heslo</label>
+                        <input type="password" class="form-control" id="password-control" name="password-control" required oninput="checkPassword()" >
+                    </div>
+                </div>
+                <button type="submit" name="submit" class="btn btn-outline-secondary changeHTML" onclick="checkEmail()" >Uložiť</button>
+            </form>
+        </div>
+    </article>
+
+
+    <div class="modal fade" id="two-fa-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">Naskenujte QR Kód</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body modal-body-center">
+                        <img id="qr-code-img" alt="qrCode">
+                </div>
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="qr">Vložte Kód</label>
+                            <input type="text" class="form-control" id="qr" required name="qr">
+                            <div class="invalid-feedback">
+                                Nesprávny kód
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="regUser()">Potvrdiť</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+<footer>
+    <span>Design by Katarína Stasová</span>
+</footer>
+</body>
+</html>

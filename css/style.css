@@ -1,0 +1,234 @@
+
+html{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+
+#index-body{
+    /*background: #d0d0d0 url("../pictures/bg.png") no-repeat center;*/
+    background-size: 60%;
+    opacity: 0.87;
+}
+#login-past-body{
+    background: #d0d0d0;
+}
+
+section{
+    margin-bottom: 70px;
+}
+
+#google{
+    border-radius: 20px;
+}
+#google:hover{
+    cursor: pointer;
+    border-left: #e1e1e1 solid 4px;
+    border-right: #e1e1e1 solid 4px;
+
+    animation-duration: 1s;
+    transition: 0.1s;
+}
+
+#head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#back{
+    left: -20px ;
+    margin-left: 3%;
+}
+
+.icon:hover{
+    filter: invert(56%) sepia(1%) saturate(162%) hue-rotate(344deg) brightness(102%) contrast(92%);
+    cursor: pointer;
+}
+
+
+h1{
+    margin-left: 8px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    margin-top: 18px;
+}
+
+#registration{
+    width: 60%;
+    margin: 3% auto 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 2%;
+    background: ghostwhite;
+    opacity: 0.80;
+
+}
+#reg-body{
+    background: #d0d0d0;
+
+}
+#login-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #registration{
+        height: 95%;
+        width: 94%;
+    }
+    h1{
+        font-size: 40px;
+    }
+    #user{
+        background-image: url("../pictures/pexels-eberhard-grossgasteiger-1287083.jpg") ;
+        background-position: bottom;
+        background-repeat: repeat;
+        background-size: auto;
+    }
+}
+
+#login-div{
+    width: 400px;
+    margin: 100px auto 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 13px;
+    background: #d0d0d0;
+
+}
+
+#control-code-from-qr{
+    padding: 20px;
+    text-align: center;
+
+}
+#qr-code-img{
+    border: 0;
+}
+
+#two-fa-modal{
+    text-align: center;
+}
+
+#qr{
+    margin: 0 auto 0 auto;
+    width: 250px;
+}
+
+footer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    font-size: smaller;
+    padding-bottom: 15px;
+}
+
+.img{
+    opacity: 1;
+    border-right: solid 3px dimgrey;
+    padding-right: 4px;
+    margin-right: 4px;
+}
+
+.button{
+    opacity: 1;
+    font-weight: bold;
+    animation-duration: 1s;
+    padding: 12px 19px 12px 19px;
+    border: 0;
+    border-radius: 20px;
+}
+
+.button:hover{
+    cursor: pointer;
+    border-left: #e1e1e1 solid 4px;
+    border-right: #e1e1e1 solid 4px;
+
+    animation-duration: 1s;
+    transition: 0.1s;
+}
+#user{
+    background-image: url("../pictures/pexels-eberhard-grossgasteiger-1287083.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#user-info{
+    width: 400px;
+    margin: 3% auto 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 2%;
+    opacity: 0.7;
+    height: 300px;
+}
+#last-logs{
+    opacity: 0.5;
+}
+
+#line{
+    margin: 10px;
+    border-bottom: solid 3px white;
+}
+
+#statistic-article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#statistic-div{
+    width: 300px;
+
+}
+
+#ldap-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ldap-div2{
+    width: 80px;
+    border-radius: 20px;
+    background: #831135;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+#ldap-button{
+    background: #831135;
+    font-weight: bold;
+    color: white;
+}
+.ldap{
+    display: none;
+}
+.not-ldap{
+    display: block;
+}
